@@ -50,3 +50,7 @@ a:hover {
   background-color: #fff;
   color: #057dcd;
 }
+
+li{
+  list-style-type:none;
+}

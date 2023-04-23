@@ -1,7 +1,6 @@
 function botao(link, texto) {
   return `
-  
-    <a target="_blank" href="${link}">${texto}</a>
+  <li> <a target="_blank" href="${link}">${texto}</a></li>  
 `
 }
 
@@ -15,7 +14,6 @@ function card(title, button, buttonn) {
         <div>
          <ul>
          ${button} 
-         ${buttonn}
          </ul>
         </div>
       </div>
@@ -25,5 +23,29 @@ function card(title, button, buttonn) {
 }
 
 document.querySelector("#app").innerHTML = `
- ${card("impressora",botao("www.google.com","preto"),botao("#","colorido")) }
+<main>
+
+ ${card(
+   "impressora",
+   botao("www.google.com", "preto") + botao("www.google.com", "colorido")
+ )}
+
+ ${card(
+   "impressora",
+   botao("www.google.com", "preto") + botao("www.google.com", "colorido")
+ )}
+  ${card(
+    "impressora",
+    botao("www.google.com", "preto") + botao("www.google.com", "colorido")
+  )}
+   ${card(
+     "impressora",
+     botao("www.google.com", "preto") + botao("www.google.com", "colorido")
+   )}
+    ${card(
+      "impressora",
+      botao("www.google.com", "preto") + botao("www.google.com", "colorido")
+    )}
+    
+  </main>
 `
